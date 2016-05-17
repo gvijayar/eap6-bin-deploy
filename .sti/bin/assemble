@@ -74,9 +74,9 @@ fi
 # directory for later deployment
 copy_artifacts "deployments"
 
-echo " Veer - Custom Code"
-echo ${WAR_FILE_URL}
-curl -o ${DEPLOY_DIR}/ROOT.war -O ${WAR_FILE_URL}
+echo " Deploying Pre-Built Application Binary"
+echo ${APP_BUILD_FILE_URL}
+curl -o ${DEPLOY_DIR}/ROOT.war -O ${APP_BUILD_FILE_URL}
 
 if [ -d $LOCAL_SOURCE_DIR/configuration ]; then
   echo "Copying config files from project..."
